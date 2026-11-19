@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABB × AI Driven Choreography — Emilie Grandjean</title>
+  <meta name="description" content="An ABB GoFa industrial robot arm that dances to music, driven by a VAE over audio features and executed through ROS 2 and MoveIt. Exhibited at the Swiss Design Awards 2025.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ABB × AI Driven Choreography — Emilie Grandjean">
+  <meta property="og:description" content="An ABB GoFa industrial robot arm that dances to music, driven by a VAE over audio features and executed through ROS 2 and MoveIt. Exhibited at the Swiss Design Awards 2025.">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/projects/abb-choreography.html">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/ABB/exhibition1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="header-right">
+        <a href="../index.html" class="logo" aria-label="Emilie Grandjean — home">EM-G</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="project">
+    <div class="container">
+
+      <p class="eyebrow">Spring 2025 · continued through Oct 2025</p>
+      <h1>ABB × AI Driven Choreography</h1>
+      <p class="lead">An industrial robot arm turned performer: music is translated into expressive, dance-like motion for an ABB GoFa collaborative robot.</p>
+      <ul class="facts">
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>EPFL, Lausanne</span></li>
+        <li><i class="fas fa-users" aria-hidden="true"></i><span>With design duo Claire + Léa and teammate Advaith</span></li>
+        <li><i class="fas fa-trophy" aria-hidden="true"></i><span>Exhibited: <a href="https://swissdesignawards.ch/en/2025/claire-lea" target="_blank" rel="noopener">Swiss Design Awards 2025</a> · <a href="https://www.forumdes100.ch/edition-25" target="_blank" rel="noopener">Forum des 100</a></span></li>
+      </ul>
+      <ul class="tags"><li class="tag">Python</li><li class="tag">ROS 2</li><li class="tag">MoveIt</li><li class="tag">Variational autoencoder</li><li class="tag">MFCC</li><li class="tag">ABB GoFa</li><li class="tag">RobotStudio</li></ul>
+      
+      <figure class="hero-media portrait">
+        <div class="media"><video src="../assets/ABB/exhibition.mp4" poster="../assets/ABB/exhibition_poster.jpg" width="720" height="1280" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>The robot performing a generated choreography at the exhibition.</figcaption>
+      </figure>
+
+      <h2>Overview</h2>
+      <p>This project explores organic, poetic choreography for an ABB robotic arm, far from its usual industrial use. With AI, the arm is reimagined not as a tool but as a performer capable of expressiveness, gesture and emotional resonance.</p>
+      <p>The project was initiated by Claire + Léa, a design duo exploring robotics in artistic settings, and began as a collaboration with Advaith, my teammate. Together we set out to develop a sensitive, choreographic language for the machine, questioning the boundary between human intention and mechanical interpretation. It was first presented at the Swiss Design Awards in June 2025.</p>
+      <p>I then continued developing it. The first version danced to a single song; the next version added interactivity: visitors choose from a selection of music, which changes the robot’s movement. The audience becomes co-author of the performance.</p>
+
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>Audio input:</strong> a music track (WAV) is selected.</li>
+        <li><strong>Audio features → motion:</strong> MFCC features are extracted from the music and passed to a variational autoencoder (VAE) that generates joint trajectories.</li>
+        <li><strong>ROS 2 service:</strong> the generated trajectory is sent through a ROS 2 trajectory service.</li>
+        <li><strong>Smoothing:</strong> a MoveIt (<code>moveit_cpp</code>) interface smooths the trajectory.</li>
+        <li><strong>Execution:</strong> a ROS 2 <code>joint_trajectory_controller</code> drives the ABB GoFa arm.</li>
+      </ol>
+      <figure class="wide-figure">
+        <a class="media" href="../assets/ABB/system_architecture_audio2ros.png" target="_blank" rel="noopener"><img src="../assets/ABB/system_architecture_audio2ros.png" alt="Pipeline diagram: Audio input (WAV), music_motion (VAE + MFCC), ROS 2 Trajectory service, moveit_cpp_interface trajectory smoothing, ROS 2 joint_trajectory_controller, ABB GoFa robotic arm" width="2070" height="584" loading="lazy"></a>
+        <figcaption>System architecture, from audio to robot motion.</figcaption>
+      </figure>
+
+      <h2>Safety for public exhibition</h2>
+      <p>Because the robot performed in front of visitors, safety zones and collision-avoidance protocols were set up in ABB RobotStudio for the live demonstrations.</p>
+
+      <h2>Next steps</h2>
+      <p>Real-time hand tracking with MediaPipe was explored so that visitors could influence the movement directly with gestures. It is not part of the exhibited version yet.</p>
+
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <figure>
+          <a class="media" href="../assets/ABB/exhibition1.jpg" target="_blank" rel="noopener"><img src="../assets/ABB/exhibition1.jpg" alt="ABB GoFa arm with blue fabric wings on a white pedestal in the exhibition space" width="1800" height="1244" loading="lazy"></a>
+          <figcaption>Installation at the Swiss Design Awards 2025, Basel.</figcaption>
+        </figure>
+        <figure>
+          <a class="media" href="../assets/ABB/emilie_abb.jpg" target="_blank" rel="noopener"><img src="../assets/ABB/emilie_abb.jpg" alt="Emilie Grandjean in front of the robot installation" width="900" height="1120" loading="lazy"></a>
+          <figcaption>At the Swiss Design Awards 2025.</figcaption>
+        </figure>
+        <figure>
+          <a class="media" href="../assets/ABB/forum_des_100.jpg" target="_blank" rel="noopener"><img src="../assets/ABB/forum_des_100.jpg" alt="Emilie Grandjean presenting next to the robot at the SwissTech Convention Center" width="1350" height="1800" loading="lazy"></a>
+          <figcaption>Presenting at Forum des 100, October 2025.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Recognition</h2>
+      <p>Selected for exhibition at the Swiss Design Awards 2025 in Basel, and invited to present at Forum des 100 (SwissTech Convention Center, Lausanne). By shifting robotics from productivity to expressivity, the project proposes a more human-centred vision of AI, where machines are built not only to execute but also to listen, adapt and dance.</p>
+      <nav class="project-nav" aria-label="More projects">
+        <a class="prev" href="vr-game.html"><span>← Previous</span>VR Game</a>
+        <a class="next" href="costume-behaviors.html"><span>Next →</span>Costume Behaviors</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

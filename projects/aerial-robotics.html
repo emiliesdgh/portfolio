@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aerial Robotics — Emilie Grandjean</title>
+  <meta name="description" content="Autonomous flight for the Crazyflie mini-drone through a five-gate course: vision-based gate detection in Webots simulation, then transfer to the real quadrotor.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Aerial Robotics — Emilie Grandjean">
+  <meta property="og:description" content="Autonomous flight for the Crazyflie mini-drone through a five-gate course: vision-based gate detection in Webots simulation, then transfer to the real quadrotor.">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/projects/aerial-robotics.html">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/Aerial/simulation_poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="header-right">
+        <a href="../index.html" class="logo" aria-label="Emilie Grandjean — home">EM-G</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="project">
+    <div class="container">
+
+      <p class="eyebrow">Spring 2025 · Aerial Robotics course</p>
+      <h1>Aerial Robotics</h1>
+      <p class="lead">Programming a Crazyflie mini-drone to fly a gate course autonomously and as fast as possible, first in simulation, then on the real quadrotor.</p>
+      <ul class="facts">
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>EPFL, Lausanne</span></li>
+        <li><i class="fab fa-github" aria-hidden="true"></i><span><a href="https://github.com/emiliesdgh/AerialProject_2025" target="_blank" rel="noopener">Simulation code</a></span></li>
+        <li><i class="fab fa-github" aria-hidden="true"></i><span><a href="https://github.com/emiliesdgh/AerialProject_2025Hardeware" target="_blank" rel="noopener">Hardware code</a></span></li>
+      </ul>
+      <ul class="tags"><li class="tag">Python</li><li class="tag">C++</li><li class="tag">OpenCV</li><li class="tag">Webots</li><li class="tag">Crazyflie</li><li class="tag">PID control</li></ul>
+      
+      <figure class="hero-media">
+        <div class="media"><video src="../assets/Aerial/simulation.mp4" poster="../assets/Aerial/simulation_poster.jpg" width="1280" height="1006" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>Simulation run in Webots. Top-left: the drone’s onboard camera view.</figcaption>
+      </figure>
+
+      <h2>Overview</h2>
+      <p>The project bridges simulation and real-world robotics: the same algorithms had to work in Webots and on the physical Crazyflie. The challenge combined autonomous take-off, vision-based gate detection, speed-optimised navigation and the transfer from simulation to hardware.</p>
+
+      <h2>Simulation</h2>
+      <p>In a randomly generated arena with five gates arranged in a loop, the drone:</p>
+      <ul class="list">
+        <li>takes off from a platform;</li>
+        <li>detects the gates with OpenCV on its first lap;</li>
+        <li>uses the gate positions it has found to fly faster laps, counter-clockwise;</li>
+        <li>works in any arena generated with this structure, not just one fixed layout.</li>
+      </ul>
+
+      <h2>Hardware</h2>
+      <p>The algorithms were then transferred to the real Crazyflie in a smaller arena with the same structure. Gate positions are known in advance there, so vision is not needed, but the controllers needed significant re-tuning to cope with real-world dynamics, sensor noise and latency.</p>
+
+      <div class="gallery two">
+        <figure>
+          <a class="media contain" href="../assets/Aerial/aerial_map.png" target="_blank" rel="noopener"><img src="../assets/Aerial/aerial_map.png" alt="Arena diagram with five gates, take-off pad and flight paths for lap 1 and laps 2–3" width="1480" height="848" loading="lazy"></a>
+          <figcaption>Arena layout: lap 1 vision-based and untimed, laps 2–3 timed.</figcaption>
+        </figure>
+        <figure>
+          <a class="media contain" href="../assets/Aerial/system_scheme.png" target="_blank" rel="noopener"><img src="../assets/Aerial/system_scheme.png" alt="Diagram: sensor data, the student algorithm, high-level commands, cascaded PID and motor commands, for Webots and the Crazyflie" width="1350" height="806" loading="lazy"></a>
+          <figcaption>Course framework: my algorithm turns sensor data into setpoints for a cascaded PID controller.</figcaption>
+        </figure>
+      </div>
+
+      <h2>What I worked on</h2>
+      <ul class="list">
+        <li><strong>Perception:</strong> OpenCV gate detection from the onboard camera.</li>
+        <li><strong>Planning:</strong> trajectory optimisation for speed while keeping control.</li>
+        <li><strong>Control:</strong> PID tuning for stable flight, in simulation and on hardware.</li>
+        <li><strong>Sim-to-real:</strong> adapting the simulation code to sensor noise, latency and the limits of the embedded hardware.</li>
+      </ul>
+      <nav class="project-nav" aria-label="More projects">
+        <a class="prev" href="costume-behaviors.html"><span>← Previous</span>Costume Behaviors</a>
+        <a class="next" href="cg-city.html"><span>Next →</span>Procedural City</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

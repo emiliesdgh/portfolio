@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Procedural City (Computer Graphics) — Emilie Grandjean</title>
+  <meta name="description" content="An interactive, procedurally generated 3D city built with Wave Function Collapse and custom GLSL shaders, with fog, water and over a million GPU snow particles.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Procedural City (Computer Graphics) — Emilie Grandjean">
+  <meta property="og:description" content="An interactive, procedurally generated 3D city built with Wave Function Collapse and custom GLSL shaders, with fog, water and over a million GPU snow particles.">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/projects/cg-city.html">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/CG/cg_city.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="header-right">
+        <a href="../index.html" class="logo" aria-label="Emilie Grandjean — home">EM-G</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="project">
+    <div class="container">
+
+      <p class="eyebrow">Spring 2024 · Computer Graphics course</p>
+      <h1>Procedural City</h1>
+      <p class="lead">An interactive 3D city generated from scratch, with dynamic weather and lighting, rendered in real time in the browser.</p>
+      <ul class="facts">
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>EPFL, Lausanne</span></li>
+        <li><i class="fab fa-github" aria-hidden="true"></i><span><a href="https://github.com/emiliesdgh/computer_graphics" target="_blank" rel="noopener">Code on GitHub</a></span></li>
+      </ul>
+      <ul class="tags"><li class="tag">GLSL</li><li class="tag">WebGL</li><li class="tag">Wave Function Collapse</li><li class="tag">Blender</li><li class="tag">Python</li><li class="tag">GPU particles</li></ul>
+      
+      <figure class="hero-media">
+        <div class="media"><video src="../assets/CG/cg_city.mp4" poster="../assets/CG/cg_city_poster.jpg" width="1280" height="720" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>Walkthrough of a generated city.</figcaption>
+      </figure>
+
+      <h2>Overview</h2>
+      <p>The city layout is generated procedurally, then rendered with custom shaders for atmosphere and weather. The scene includes more than one million GPU-accelerated snow particles running in real time on mid-range GPUs.</p>
+
+      <h2>Key features</h2>
+      <div class="feature-grid">
+        <div class="card feature"><h3><i class="fas fa-puzzle-piece" aria-hidden="true"></i>Wave Function Collapse</h3><p>17 hand-modelled Blender tiles, with automatic rotation and matching, and instanced rendering for efficient city generation.</p></div>
+        <div class="card feature"><h3><i class="fas fa-snowflake" aria-hidden="true"></i>Snowfall</h3><p>1M+ GPU particles in real time on mid-range hardware.</p></div>
+        <div class="card feature"><h3><i class="fas fa-smog" aria-hidden="true"></i>Atmospheric fog</h3><p>Depth-based blending that gives the city a sense of scale.</p></div>
+        <div class="card feature"><h3><i class="fas fa-layer-group" aria-hidden="true"></i>Normal mapping</h3><p>Detailed building façades without extra geometry.</p></div>
+        <div class="card feature"><h3><i class="fas fa-water" aria-hidden="true"></i>Procedural water</h3><p>Ripples generated with cellular noise.</p></div>
+        <div class="card feature"><h3><i class="fas fa-cubes" aria-hidden="true"></i>Asset pipeline</h3><p>Modular assets designed in Blender and exported for the WebGL engine.</p></div>
+      </div>
+
+      <h2>Gallery</h2>
+      <div class="gallery two">
+        <figure>
+          <a class="media" href="../assets/CG/cg_city.jpg" target="_blank" rel="noopener"><img src="../assets/CG/cg_city.jpg" alt="Street-level view of the generated city in snow and fog" width="1800" height="1021" loading="lazy"></a>
+          <figcaption>Street-level view with fog and snowfall.</figcaption>
+        </figure>
+        <figure>
+          <a class="media" href="../assets/CG/generated_city.jpg" target="_blank" rel="noopener"><img src="../assets/CG/generated_city.jpg" alt="Aerial view of a dense generated city grid" width="1800" height="1012" loading="lazy"></a>
+          <figcaption>Top-down view of a generated layout.</figcaption>
+        </figure>
+      </div>
+      <nav class="project-nav" aria-label="More projects">
+        <a class="prev" href="aerial-robotics.html"><span>← Previous</span>Aerial Robotics</a>
+        <a class="next" href="stepinator.html"><span>Next →</span>Stepinator</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

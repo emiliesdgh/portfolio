@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Reality Game — Emilie Grandjean</title>
+  <meta name="description" content="A fully playable Oculus Quest game with four themed worlds, physics-based interactions, teleportation and a self-contained tutorial. Built in Unity (C#).">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Virtual Reality Game — Emilie Grandjean">
+  <meta property="og:description" content="A fully playable Oculus Quest game with four themed worlds, physics-based interactions, teleportation and a self-contained tutorial. Built in Unity (C#).">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/projects/vr-game.html">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/VR/vr_worlds.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="header-right">
+        <a href="../index.html" class="logo" aria-label="Emilie Grandjean — home">EM-G</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="project">
+    <div class="container">
+
+      <p class="eyebrow">Spring 2024 · Virtual Reality course</p>
+      <h1>Virtual Reality Game</h1>
+      <p class="lead">A fully playable Oculus Quest game: restore the elements by travelling through four themed worlds, using physics-based interactions.</p>
+      <ul class="facts">
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>EPFL, Lausanne</span></li>
+        <li><i class="fas fa-vr-cardboard" aria-hidden="true"></i><span>Oculus Quest</span></li>
+      </ul>
+      <ul class="tags"><li class="tag">Unity</li><li class="tag">C#</li><li class="tag">Oculus Quest SDK</li><li class="tag">Interaction design</li><li class="tag">3D environments</li></ul>
+      
+      <figure class="hero-media">
+        <div class="media"><video src="../assets/VR/element_room_highlight.mp4" poster="../assets/VR/element_room_highlight_poster.jpg" width="1024" height="1024" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>One-minute highlight of a playthrough: tutorial, forest, beach, lava and sky worlds.</figcaption>
+      </figure>
+
+      <h2>Concept</h2>
+      <p>A stable, fully playable game for the Oculus Quest headset and controllers. It includes an in-game tutorial so new players can learn every mechanic on their own, and several scenes with different gameplay, physics-based interactions and environments designed specifically for VR.</p>
+
+      <h2>Player interactions</h2>
+      <div class="feature-grid">
+        <div class="card feature"><h3><i class="fas fa-baseball" aria-hidden="true"></i>Throwing</h3><p>Physics-based throws: trajectory follows the speed and direction of the controller at release.</p></div>
+        <div class="card feature"><h3><i class="fas fa-box-open" aria-hidden="true"></i>Containers</h3><p>Place objects in a container, then pick up the container with its contents held in place by the physics.</p></div>
+        <div class="card feature"><h3><i class="fas fa-golf-ball-tee" aria-hidden="true"></i>Swing and hit</h3><p>Hitting objects, such as a golf ball with a club, with force and direction taken from the swing.</p></div>
+        <div class="card feature"><h3><i class="fas fa-hand-back-fist" aria-hidden="true"></i>Alternate grab</h3><p>A custom grab-and-hold mechanic, distinct from the standard implementation.</p></div>
+        <div class="card feature"><h3><i class="fas fa-door-open" aria-hidden="true"></i>Joint interaction</h3><p>Doors and chests opened by grabbing and pulling, driven by physics joints rather than animation.</p></div>
+        <div class="card feature"><h3><i class="fas fa-location-arrow" aria-hidden="true"></i>Teleportation</h3><p>Point-and-select locomotion that moves the player quickly while limiting motion sickness.</p></div>
+      </div>
+
+      <h2>Challenges</h2>
+      <ul class="list">
+        <li>Keeping a steady 72+ FPS for a comfortable VR experience.</li>
+        <li>Realistic physics without causing motion sickness.</li>
+        <li>Interactions that feel natural without explanation.</li>
+        <li>A tutorial that teaches every mechanic without overwhelming the player.</li>
+      </ul>
+
+      <h2>Gallery</h2>
+      
+        <figure>
+          <a class="media" href="../assets/VR/vr_worlds.jpg" target="_blank" rel="noopener"><img src="../assets/VR/vr_worlds.jpg" alt="Four panels showing the forest, beach, lava and cloud worlds" width="1782" height="976" loading="lazy"></a>
+          <figcaption>The four worlds of the game.</figcaption>
+        </figure>
+      <nav class="project-nav" aria-label="More projects">
+        <a class="prev" href="mobile-robotics.html"><span>← Previous</span>Mobile Robotics</a>
+        <a class="next" href="abb-choreography.html"><span>Next →</span>ABB × AI Choreography</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

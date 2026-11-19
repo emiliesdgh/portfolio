@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designing Costume Behaviors — Emilie Grandjean</title>
+  <meta name="description" content="Sensor-driven behaviours that bring costumes for the Thymio educational robot to life, implemented in Python, VPL3 and Blockly. MOBOTS group, EPFL.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Designing Costume Behaviors — Emilie Grandjean">
+  <meta property="og:description" content="Sensor-driven behaviours that bring costumes for the Thymio educational robot to life, implemented in Python, VPL3 and Blockly. MOBOTS group, EPFL.">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/projects/costume-behaviors.html">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/DesignCostume/costume_exploration.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="header-right">
+        <a href="../index.html" class="logo" aria-label="Emilie Grandjean — home">EM-G</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="project">
+    <div class="container">
+
+      <p class="eyebrow">Spring 2024 · Semester project</p>
+      <h1>Designing Costume Behaviors</h1>
+      <p class="lead">Giving the Thymio educational robot new expressive behaviours, so its costumes react to touch, motion and proximity.</p>
+      <ul class="facts">
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>MOBOTS group, EPFL</span></li>
+        <li><i class="fas fa-users" aria-hidden="true"></i><span>In collaboration with designer Léa Pereyre</span></li>
+        <li><i class="fab fa-github" aria-hidden="true"></i><span><a href="https://github.com/emiliesdgh/MA2_semesterProject" target="_blank" rel="noopener">Code on GitHub</a></span></li>
+      </ul>
+      <ul class="tags"><li class="tag">Python</li><li class="tag">VPL3</li><li class="tag">Blockly</li><li class="tag">Thymio</li><li class="tag">Human–robot interaction</li><li class="tag">Educational technology</li></ul>
+      
+      <figure class="hero-media">
+        <div class="media"><video src="../assets/DesignCostume/new_costume.mp4" poster="../assets/DesignCostume/new_costume_poster.jpg" width="1280" height="720" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>A costume reacting to the robot’s sensors.</figcaption>
+      </figure>
+
+      <h2>Overview</h2>
+      <p>The Thymio is an open-source educational robot developed at EPFL. Costumes designed for it already produced striking aesthetic results with simple movements. This project explored how to make better use of Thymio’s sensors and more advanced programming, while keeping the aesthetic and educational spirit of the original.</p>
+
+      <h2>Approach</h2>
+      <ol class="steps">
+        <li>Studied each sensor (proximity, accelerometer, sound, …) in isolation to understand its capabilities.</li>
+        <li>Paired sensors with costume designs to create behaviours that make sense for each costume.</li>
+        <li>Developed each behaviour in Python first, for full control.</li>
+        <li>Ported the behaviours to VPL3, Thymio’s visual programming language.</li>
+        <li>Translated them to Blockly for even broader accessibility.</li>
+      </ol>
+      <p>This multi-platform approach means the behaviours can be understood and modified by users at every level, from beginners using visual programming to advanced users in Python.</p>
+
+      <h2>Behaviours</h2>
+      <div class="gallery">
+      <figure class="">
+        <div class="media"><video src="../assets/DesignCostume/accelerometer.mp4" poster="../assets/DesignCostume/accelerometer_poster.jpg" width="1280" height="720" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>Accelerometer-based behaviour.</figcaption>
+      </figure>
+      <figure class="">
+        <div class="media"><video src="../assets/DesignCostume/auto_turn.mp4" poster="../assets/DesignCostume/auto_turn_poster.jpg" width="1280" height="720" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>Autonomous turning costume.</figcaption>
+      </figure>
+      </div>
+
+      <h2>Costume designs</h2>
+      <div class="gallery">
+        <figure>
+          <a class="media" href="../assets/DesignCostume/costume_exploration.jpg" target="_blank" rel="noopener"><img src="../assets/DesignCostume/costume_exploration.jpg" alt="Thymio with a costume of orange and blue ribbons with round tips" width="1800" height="1200" loading="lazy"></a>
+          <figcaption>Costume design exploration.</figcaption>
+        </figure>
+        <figure>
+          <a class="media contain" href="../assets/DesignCostume/costume_accelerometer.jpg" target="_blank" rel="noopener"><img src="../assets/DesignCostume/costume_accelerometer.jpg" alt="Thymio with a fan-shaped white costume with black tips" width="1800" height="1445" loading="lazy"></a>
+          <figcaption>Costume emphasising the accelerometer.</figcaption>
+        </figure>
+        <figure>
+          <a class="media" href="../assets/DesignCostume/costume_proximity.jpg" target="_blank" rel="noopener"><img src="../assets/DesignCostume/costume_proximity.jpg" alt="Thymio with a ring of red and blue ribbon loops" width="1800" height="1200" loading="lazy"></a>
+          <figcaption>Costume reacting to the proximity sensors.</figcaption>
+        </figure>
+        <figure>
+          <a class="media contain" href="../assets/DesignCostume/all_costumes.jpg" target="_blank" rel="noopener"><img src="../assets/DesignCostume/all_costumes.jpg" alt="Line drawings of five costume designs on the Thymio" width="1684" height="1190" loading="lazy"></a>
+          <figcaption>Costume concepts.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Outcome</h2>
+      <p>The project showed how aesthetic design and richer programming can be combined in educational robotics. Because the behaviours exist in Python, VPL3 and Blockly, learners at all levels can use them, while still learning core robotics concepts: sensor integration, behaviour programming and iterative design.</p>
+      <nav class="project-nav" aria-label="More projects">
+        <a class="prev" href="abb-choreography.html"><span>← Previous</span>ABB × AI Choreography</a>
+        <a class="next" href="aerial-robotics.html"><span>Next →</span>Aerial Robotics</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

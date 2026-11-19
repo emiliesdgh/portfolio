@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile Robotics — Emilie Grandjean</title>
+  <meta name="description" content="Autonomous navigation for the Thymio robot: camera-based mapping, global path planning, Bayesian filtering and real-time avoidance of unexpected obstacles.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mobile Robotics — Emilie Grandjean">
+  <meta property="og:description" content="Autonomous navigation for the Thymio robot: camera-based mapping, global path planning, Bayesian filtering and real-time avoidance of unexpected obstacles.">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/projects/mobile-robotics.html">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/Mobile/local_navigation_poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="header-right">
+        <a href="../index.html" class="logo" aria-label="Emilie Grandjean — home">EM-G</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="project">
+    <div class="container">
+
+      <p class="eyebrow">Fall 2023 · Basics of Mobile Robotics</p>
+      <h1>Mobile Robotics</h1>
+      <p class="lead">A Thymio robot that maps its environment with a camera, plans a path to the goal, and reacts to obstacles placed in its way.</p>
+      <ul class="facts">
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>EPFL, Lausanne</span></li>
+        <li><i class="fas fa-user-tie" aria-hidden="true"></i><span>Course by Prof. Francesco Mondada</span></li>
+        <li><i class="fab fa-github" aria-hidden="true"></i><span><a href="https://github.com/emiliesdgh/Projet_mobileRobotics" target="_blank" rel="noopener">Code on GitHub</a></span></li>
+      </ul>
+      <ul class="tags"><li class="tag">Python</li><li class="tag">OpenCV</li><li class="tag">Thymio</li><li class="tag">Path planning</li><li class="tag">Bayesian filtering</li><li class="tag">Obstacle avoidance</li></ul>
+
+      <h2>Overview</h2>
+      <p>The robot must reach a goal through an environment with fixed obstacles, and dynamically avoid obstacles placed in its path while it moves. The project brings together computer vision, global and local navigation, motion control and Bayesian filtering in one working system.</p>
+
+      <div class="gallery two">
+      <figure class="">
+        <div class="media"><video src="../assets/Mobile/local_navigation.mp4" poster="../assets/Mobile/local_navigation_poster.jpg" width="1280" height="928" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>Local navigation: avoiding an obstacle placed in the robot’s path.</figcaption>
+      </figure>
+      <figure class="">
+        <div class="media"><video src="../assets/Mobile/kidnapping.mp4" poster="../assets/Mobile/kidnapping_poster.jpg" width="1280" height="720" muted loop playsinline preload="metadata" controls data-autoplay></video></div>
+        <figcaption>Kidnapping: the robot is moved by hand and recovers its position.</figcaption>
+      </figure>
+      </div>
+
+      <h2>System</h2>
+      <div class="feature-grid">
+        <div class="card feature"><h3><i class="fas fa-camera" aria-hidden="true"></i>Vision</h3><p>OpenCV processes an overhead camera image to detect the obstacles, the robot’s pose and the target.</p></div>
+        <div class="card feature"><h3><i class="fas fa-route" aria-hidden="true"></i>Global navigation</h3><p>Path planning on the known map computes a collision-free route from start to goal; the target can be moved during the run.</p></div>
+        <div class="card feature"><h3><i class="fas fa-crosshairs" aria-hidden="true"></i>Bayesian filtering</h3><p>Fuses odometry with camera observations for robust estimation of position and orientation.</p></div>
+        <div class="card feature"><h3><i class="fas fa-gamepad" aria-hidden="true"></i>Motion control</h3><p>Converts the planned path into motor commands for smooth, stable path following.</p></div>
+        <div class="card feature"><h3><i class="fas fa-hand" aria-hidden="true"></i>Local avoidance</h3><p>The proximity sensors temporarily override the global path to get around unexpected obstacles, then the robot resumes its route.</p></div>
+      </div>
+      <nav class="project-nav" aria-label="More projects">
+        <a class="prev" href="stepinator.html"><span>← Previous</span>Stepinator</a>
+        <a class="next" href="vr-game.html"><span>Next →</span>VR Game</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

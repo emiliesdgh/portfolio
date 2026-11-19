@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emilie Grandjean — Robotics &amp; Computer Science Engineer</title>
+  <meta name="description" content="Portfolio of Emilie Grandjean, robotics and computer science engineer (EPFL). Expressive robotics, machine learning, computer vision, human–robot interaction and interactive systems.">
+  <meta name="author" content="Emilie Grandjean">
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Emilie Grandjean — Robotics &amp; Computer Science Engineer">
+  <meta property="og:description" content="Expressive robotics, machine learning, computer vision and interactive systems. EPFL MSc Robotics, 2026.">
+  <meta property="og:url" content="https://emiliesdgh.github.io/portfolio/">
+  <meta property="og:image" content="https://emiliesdgh.github.io/portfolio/assets/ABB/exhibition1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#top" class="logo" aria-label="Emilie Grandjean — back to top">EM-G</a>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+        <button id="menu-toggle" class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="container">
+        <img src="assets/profile.jpg" alt="Portrait of Emilie Grandjean" class="profile-pic" width="900" height="1120">
+        <div>
+          <h1>Emilie Grandjean</h1>
+          <p class="role">Robotics &amp; Computer Science Engineer</p>
+          <p class="quote">“Technology, to me, is the most beautiful form of art.”</p>
+          <div class="meta-line">
+            <span><i class="fas fa-graduation-cap" aria-hidden="true"></i>MSc Robotics, EPFL (2026)</span>
+            <span><i class="fas fa-location-dot" aria-hidden="true"></i>Lausanne, Switzerland</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><i class="fas fa-arrow-down" aria-hidden="true"></i>View projects</a>
+            <a class="btn btn-ghost" href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+            <!-- TODO: add a one-page CV PDF to assets/ and uncomment:
+            <a class="btn btn-ghost" href="assets/Emilie_Grandjean_CV.pdf" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i>CV (PDF)</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section about" id="about">
+      <div class="container reveal">
+        <h2 class="section-title">About</h2>
+        <p>I am a robotics and computer science engineer based in Lausanne. I graduated from École Polytechnique Fédérale de Lausanne (EPFL) in October 2026 with a Master’s degree in Robotics and a minor in Computer Science.</p>
+        <p>I am interested in the creative side of technology: robots that move expressively, systems people can interact with, and machines that communicate. I enjoy challenging projects that combine robotics, machine learning, computer vision and art, and I like building them end to end, from the algorithm to the working prototype, together with designers, artists and engineers.</p>
+        <p>In my free time I paint, create, and spend a lot of time in museums and art exhibitions.</p>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section alt" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-intro reveal">My projects span robotics, AI, computer graphics and interactive systems, each one an exploration of how machines can move, perceive and communicate. From aerial drones and industrial arms to wearable robots and virtual worlds, I build systems end to end: programming behaviour, designing interaction, and questioning what technology can express beyond function.</p>
+
+        <div class="projects-grid">
+          <a class="card project-card reveal" href="projects/abb-choreography.html">
+            <img class="thumb" src="assets/thumbs/abb.jpg" alt="ABB GoFa robot arm with blue fabric wings at the Swiss Design Awards exhibition" width="800" height="553" loading="lazy">
+            <div class="body">
+              <span class="when">Spring 2025 · Exhibited</span>
+              <h3>ABB × AI Driven Choreography</h3>
+              <p>An industrial ABB GoFa arm that dances to music: audio features feed a generative model whose trajectories run through ROS&nbsp;2 and MoveIt. Shown at the Swiss Design Awards and Forum des 100.</p>
+              <ul class="tags"><li class="tag">Machine learning</li><li class="tag">ROS 2</li><li class="tag">Industrial robotics</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="card project-card reveal" href="projects/costume-behaviors.html">
+            <img class="thumb" src="assets/thumbs/costumes.jpg" alt="Thymio robot wearing an orange and blue ribbon costume" width="800" height="533" loading="lazy">
+            <div class="body">
+              <span class="when">Spring 2024 · MOBOTS, EPFL</span>
+              <h3>Designing Costume Behaviors</h3>
+              <p>With designer Léa Pereyre: sensor-driven behaviours that bring costumes on the Thymio educational robot to life, implemented in Python, VPL3 and Blockly.</p>
+              <ul class="tags"><li class="tag">Human–robot interaction</li><li class="tag">Educational robotics</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="card project-card reveal" href="projects/aerial-robotics.html">
+            <img class="thumb" src="assets/thumbs/aerial.jpg" alt="Webots simulation of the drone arena with five pink gates" width="800" height="628" loading="lazy">
+            <div class="body">
+              <span class="when">Spring 2025 · EPFL</span>
+              <h3>Aerial Robotics</h3>
+              <p>Autonomous flight for the Crazyflie mini-drone through a five-gate course: vision-based gate detection in simulation, then transfer to the real quadrotor.</p>
+              <ul class="tags"><li class="tag">Control</li><li class="tag">Computer vision</li><li class="tag">Sim-to-real</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="card project-card reveal" href="projects/cg-city.html">
+            <img class="thumb" src="assets/thumbs/cg.jpg" alt="Procedurally generated city with snowfall and fog" width="800" height="453" loading="lazy">
+            <div class="body">
+              <span class="when">Spring 2024 · EPFL</span>
+              <h3>Procedural City (Computer Graphics)</h3>
+              <p>An interactive, procedurally generated 3D city built with Wave Function Collapse and custom GLSL shaders, with fog, water and over a million GPU snow particles.</p>
+              <ul class="tags"><li class="tag">GLSL</li><li class="tag">WebGL</li><li class="tag">Procedural generation</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="card project-card reveal" href="projects/stepinator.html">
+            <img class="thumb" src="assets/thumbs/stepinator.jpg" alt="Stepinator prototype: shoe on an actuated sole standing on a wooden slope" width="800" height="600" loading="lazy">
+            <div class="body">
+              <span class="when">Fall 2024 · EPFL</span>
+              <h3>Stepinator: Adaptive Shoe Sole</h3>
+              <p>A wearable device, from concept to working prototype, that automatically tilts to match the ground slope to reduce strain on knees and ankles.</p>
+              <ul class="tags"><li class="tag">Mechatronics</li><li class="tag">Wearable robotics</li><li class="tag">Prototyping</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="card project-card reveal" href="projects/mobile-robotics.html">
+            <img class="thumb" src="assets/thumbs/mobile.jpg" alt="Top-down camera view of the Thymio robot, black obstacles and the red target" width="800" height="580" loading="lazy">
+            <div class="body">
+              <span class="when">Fall 2023 · EPFL</span>
+              <h3>Mobile Robotics</h3>
+              <p>Autonomous navigation for the Thymio robot: camera-based mapping, global path planning, Bayesian filtering and real-time avoidance of unexpected obstacles.</p>
+              <ul class="tags"><li class="tag">Computer vision</li><li class="tag">Path planning</li><li class="tag">Filtering</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="card project-card reveal" href="projects/vr-game.html">
+            <img class="thumb" src="assets/thumbs/vr.jpg" alt="Four VR worlds: forest, beach, lava and clouds" width="800" height="438" loading="lazy">
+            <div class="body">
+              <span class="when">Spring 2024 · EPFL</span>
+              <h3>Virtual Reality Game</h3>
+              <p>A fully playable game for the Oculus Quest with four themed worlds, physics-based interactions, teleportation and an in-game tutorial.</p>
+              <ul class="tags"><li class="tag">Unity / C#</li><li class="tag">VR</li><li class="tag">Interaction design</li></ul>
+              <span class="more">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <p class="note reveal">More images, videos, simulations and reports are available in a <a href="https://drive.google.com/drive/folders/1whRhh3ljV33WEz0Smn51saUxJyOK9xPu?usp=sharing" target="_blank" rel="noopener">shared Google Drive folder</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline">
+          <article class="card entry reveal">
+            <div class="entry-head">
+              <div>
+                <h3>Machine Learning Engineer Intern</h3>
+                <div class="org">Logitech · CTO Office</div>
+              </div>
+              <span class="date">Aug 2025 – Feb 2026</span>
+            </div>
+            <div class="place">Lausanne, Switzerland</div>
+            <ul>
+              <li>Developed edge-AI solutions to bring machine learning capabilities to next-generation keyboards.</li>
+              <li>Explored on-device inference, sensor integration and energy-efficient models for interactive hardware.</li>
+              <li>Contributed to early research prototypes in the CTO office, bridging embedded systems and user interaction.</li>
+            </ul>
+          </article>
+
+          <article class="card entry reveal">
+            <div class="entry-head">
+              <div>
+                <h3>Teaching Assistant, Robotics Practicals</h3>
+                <div class="org">EPFL · Micro-Delta parallel robot</div>
+              </div>
+              <span class="date">Feb 2025 – Jul 2025</span>
+            </div>
+            <div class="place">Lausanne, Switzerland</div>
+            <ul>
+              <li>Guided Master’s students in controlling the Micro-Delta parallel robot: kinematics, motion control and safety.</li>
+              <li>Helped with real-time troubleshooting, robot calibration and trajectory planning.</li>
+            </ul>
+          </article>
+
+          <article class="card entry reveal">
+            <div class="entry-head">
+              <div>
+                <h3>Teaching Assistant, Analysis</h3>
+                <div class="org">EPFL · course taught by Dr. Martin Licht</div>
+              </div>
+              <span class="date">Sep 2023 – Jul 2025</span>
+            </div>
+            <div class="place">Lausanne, Switzerland</div>
+            <ul>
+              <li>Led problem-solving sessions for second-year Bachelor students (differential calculus, integrals, complex numbers).</li>
+              <li>Graded final exams.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h2 class="section-title reveal" id="recognition" style="margin-top:3.5rem">Exhibitions &amp; Recognition</h2>
+        <div class="timeline">
+          <article class="card entry reveal">
+            <div class="entry-head">
+              <div>
+                <h3>Swiss Design Awards 2025: exhibited project</h3>
+                <div class="org"><a href="projects/abb-choreography.html">ABB × AI Driven Choreography</a> · <a href="https://swissdesignawards.ch/en/2025/claire-lea" target="_blank" rel="noopener">exhibition page</a></div>
+              </div>
+              <span class="date">Jun 2025</span>
+            </div>
+            <div class="place">Basel, Switzerland</div>
+            <ul>
+              <li>Selected to show an AI-driven robotic choreography that combines industrial robotics with generative movement design.</li>
+            </ul>
+          </article>
+
+          <article class="card entry reveal">
+            <div class="entry-head">
+              <div>
+                <h3>Forum des 100: invited project presentation</h3>
+                <div class="org"><a href="projects/abb-choreography.html">ABB × AI Driven Choreography</a> · <a href="https://www.forumdes100.ch/edition-25" target="_blank" rel="noopener">Forum des 100</a></div>
+              </div>
+              <span class="date">Oct 2025</span>
+            </div>
+            <div class="place">SwissTech Convention Center, Lausanne</div>
+            <ul>
+              <li>Invited to present the project at a forum celebrating innovation and cultural influence in Switzerland.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="section alt" id="education">
+      <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="edu-grid">
+          <article class="card edu reveal">
+            <div class="icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+            <h3>Master’s degree in Robotics, minor in Computer Science</h3>
+            <div class="school">École Polytechnique Fédérale de Lausanne (EPFL)</div>
+            <div class="date">2023 – 2026 · graduated October 2026</div>
+            <span class="grade">GPA 5.12 / 6</span>
+            <p class="courses"><strong>Relevant courses:</strong> Machine Learning, Computer Vision, Aerial Robotics, Evolutionary Robotics, Virtual Reality, Computer Graphics, Basics of Mobile Robotics.</p>
+          </article>
+
+          <article class="card edu reveal">
+            <div class="icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+            <h3>Bachelor’s degree in Microengineering</h3>
+            <div class="school">École Polytechnique Fédérale de Lausanne (EPFL)</div>
+            <div class="date">2017 – 2023</div>
+            <p class="courses">Core sciences and the main branches of microengineering.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <div class="skills-grid">
+          <div class="card skill-group reveal">
+            <h3><i class="fas fa-code" aria-hidden="true"></i>Programming</h3>
+            <ul class="tags"><li class="tag">Python</li><li class="tag">C++</li><li class="tag">C#</li><li class="tag">MATLAB</li><li class="tag">GLSL</li><li class="tag">Git</li></ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fas fa-robot" aria-hidden="true"></i>Robotics</h3>
+            <ul class="tags"><li class="tag">ROS 2</li><li class="tag">MoveIt</li><li class="tag">ABB RobotStudio</li><li class="tag">Webots</li><li class="tag">Crazyflie</li><li class="tag">Thymio (VPL3, Blockly)</li></ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fas fa-brain" aria-hidden="true"></i>AI &amp; Perception</h3>
+            <ul class="tags"><li class="tag">Machine learning</li><li class="tag">Generative models (VAE)</li><li class="tag">Audio features (MFCC)</li><li class="tag">OpenCV</li><li class="tag">MediaPipe</li><li class="tag">Edge AI</li></ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fas fa-sliders" aria-hidden="true"></i>Control &amp; Estimation</h3>
+            <ul class="tags"><li class="tag">PID control</li><li class="tag">Trajectory planning</li><li class="tag">Path planning</li><li class="tag">Bayesian filtering</li><li class="tag">Sim-to-real</li></ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fas fa-cube" aria-hidden="true"></i>Graphics &amp; XR</h3>
+            <ul class="tags"><li class="tag">Unity</li><li class="tag">Oculus Quest SDK</li><li class="tag">WebGL</li><li class="tag">Procedural generation</li><li class="tag">Blender</li></ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fas fa-pen-ruler" aria-hidden="true"></i>Design &amp; Prototyping</h3>
+            <ul class="tags"><li class="tag">SolidWorks</li><li class="tag">Fusion 360</li><li class="tag">Adobe InDesign</li></ul>
+          </div>
+        </div>
+
+        <div class="languages reveal" aria-label="Languages">
+          <div class="card language"><span aria-hidden="true">🇫🇷</span><div><div class="name">French</div><div class="level">Native</div></div></div>
+          <div class="card language"><span aria-hidden="true">🇬🇧</span><div><div class="name">English</div><div class="level">Native</div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer / contact ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <h2>Let’s connect</h2>
+      <p>I’m always open to conversations about robotics, creative AI, human–machine interaction and experimental research. If you’re building something at the edge of technology and expression, I’d love to hear from you.</p>
+      <div class="links">
+        <a href="mailto:emilie.grandjean1999@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>emilie.grandjean1999@gmail.com</a>
+        <a href="https://www.linkedin.com/in/emilie-grandjean-032227279/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/emiliesdgh" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Emilie Grandjean</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
